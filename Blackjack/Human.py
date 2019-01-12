@@ -7,7 +7,13 @@ class Human:
 			yesNo = raw_input("take a new card? [y/n] ")
 			if yesNo in "yn":
 				if yesNo == "y":
-					env.agent_draw_card()
+					env.agent_action_take_new_card(True)
 				else:
-					env.player_wants_next_card = False
+					env.agent_action_take_new_card(False)
 				break
+
+	def update_state_history(self, state):
+		pass
+
+	def update(self, env):
+		pass
